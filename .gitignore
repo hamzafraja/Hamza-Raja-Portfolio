@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Local dev / tooling
+*.local
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Temporary screenshots (dev tool only)
+temporary screenshots/
+
+# Scripts (dev tool only)
+screenshot.mjs
+screenshot-section.mjs
+serve.mjs
+scripts/
+
+# Original GIF video ads — replaced by MP4 equivalents
+public/portfolio/video-ads/*.gif
+
+# Claude Code memory & config (local dev only)
+.claude/
+
+# Raw/source asset folders not needed for deployment
+03-assets/
+04-portfolio/
+
+# Personal files
+About.png
+profile.png
+Professional details.txt
