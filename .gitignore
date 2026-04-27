@@ -42,6 +42,9 @@ scripts/
 # Original GIF video ads — replaced by MP4 equivalents
 public/portfolio/video-ads/*.gif
 
+# Raw/unprocessed client logos (processed versions in client-logos-processed/ are used)
+public/client-logos/
+
 # Claude Code memory & config (local dev only)
 .claude/
 
