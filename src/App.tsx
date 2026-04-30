@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import { NavHeader } from "./components/ui/nav-header"
 import { Hero } from "./components/ui/animated-hero"
 import { LogosSlider } from "./components/logos-slider"
@@ -29,6 +30,7 @@ function App() {
         <Contact />
       </main>
       <MinimalFooter />
+      <Analytics />
     </>
   )
 }
