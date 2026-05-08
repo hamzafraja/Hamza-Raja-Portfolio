@@ -95,14 +95,14 @@ export function Solution() {
               className="font-sans leading-[1.85] text-muted-foreground"
               style={{ fontSize: "1.2rem" }}
             >
-              It's to find the thoughts already there — and connect them to your message.
+              It's to find the thoughts already there and connect them to your message.
             </p>
             <p
               className="font-display font-semibold text-foreground leading-snug"
               style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)", letterSpacing: "-0.02em" }}
             >
               When you get that right, your copy doesn't feel like an ad.{" "}
-              <span style={{ color: "#E8B840" }}>It feels like someone read their mind.</span>
+              <span style={{ color: "#E8B840" }}>It feels like someone reading their mind.</span>
             </p>
           </div>
         </motion.div>

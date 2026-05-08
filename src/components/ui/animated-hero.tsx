@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function scrollToContact() {
@@ -12,22 +12,10 @@ function scrollToWork() {
 }
 
 const avatars = [
-  {
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face",
-    alt: "Client 1",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
-    alt: "Client 2",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
-    alt: "Client 3",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face",
-    alt: "Client 4",
-  },
+  { src: "/testimonials/pita.png",    alt: "Pita Dhaliwal" },
+  { src: "/testimonials/matt.png",    alt: "Matt Mason" },
+  { src: "/testimonials/joshua.png",  alt: "Joshua George" },
+  { src: "/testimonials/gregory.png", alt: "Gregory Fleurot" },
 ];
 
 function Hero() {
@@ -51,27 +39,27 @@ function Hero() {
   }, [titleNumber, titles]);
 
   return (
-    <div id="home" className="relative w-full min-h-screen flex items-center overflow-hidden grain">
+    <div id="home" className="relative w-full min-h-screen flex items-center overflow-hidden">
       {/* Layered background gradients */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 60% at 50% -10%, rgba(20,90,220,0.14) 0%, transparent 70%)",
+            "radial-gradient(ellipse 90% 60% at 50% -10%, rgba(20,90,220,0.28) 0%, transparent 70%)",
         }}
       />
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 50% 50% at 85% 70%, rgba(20,90,220,0.07) 0%, transparent 60%)",
+            "radial-gradient(ellipse 50% 50% at 85% 70%, rgba(20,90,220,0.16) 0%, transparent 60%)",
         }}
       />
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 40% 40% at 10% 80%, rgba(20,90,220,0.05) 0%, transparent 60%)",
+            "radial-gradient(ellipse 40% 40% at 10% 80%, rgba(20,90,220,0.12) 0%, transparent 60%)",
         }}
       />
 
@@ -81,18 +69,6 @@ function Hero() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center justify-center gap-10 py-20 lg:py-28 max-w-4xl mx-auto text-center">
-
-          {/* Eyebrow tag */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-[#E8B840]/20 bg-[#E8B840]/6 px-4 py-1.5 text-xs font-sans font-medium tracking-widest uppercase text-[#E8B840]">
-              <Sparkles className="w-3 h-3" />
-              Creative Strategist &amp; Copywriter
-            </div>
-          </motion.div>
 
           {/* Greeting */}
           <motion.p
@@ -158,8 +134,8 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
           >
-            Ads, landing pages, websites, and everything in between — built on
-            consumer psychology and structured research, not guesswork.
+            Ads, landing pages, websites and everything in between. Built on
+            actual customer psychology and structured research.
           </motion.p>
 
           {/* CTAs */}
@@ -215,6 +191,7 @@ function Hero() {
                     width={22}
                     height={22}
                     alt={avatar.alt}
+                    style={{ objectFit: "cover", objectPosition: "top" }}
                   />
                 ))}
               </div>

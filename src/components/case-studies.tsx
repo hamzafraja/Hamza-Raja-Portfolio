@@ -13,11 +13,11 @@ const caseStudies = [
     stat: { value: "$1.63M", label: "Monthly Ad Spend" },
     roas: "2.98×",
     situation:
-      "$1.5 million in monthly ad spend means creative fatigue is constant. Every hook has been tested. Every angle has run. The audience has seen everything. The brief: build creative that holds performance at scale.",
+      "The brand was spending more than $1.5 million per month on Meta Ads. The biggest challenge at this stage is creative fatigue and maintaining the scale. They thought every angle has been tested and the audience had seen everything.",
     insight:
       "People don't buy luggage. They buy the version of themselves that travels confidently.",
     approach:
-      "The strategy was built on storytelling. Not lifestyle montages — specific, recognisable scenes that a frequent traveller would clock immediately. Each concept started with a character in a situation, not a product in a frame. Static ads anchored the product in context. Video ads built the scene first, then made the case. Feel first. Features second.",
+      "I found some untapped angles that were not being used to their full potential. But the angles were secondary here.\n\nThe strategy was built on storytelling. I pinned down what the target segments go through in their lives, not necessarily related to travel. What is going on in their lives? What regrets do they have? What is their state of mind?\n\nI then crafted stories that spoke directly to them, made them feel seen. Connecting the product with the story in a natural way was a challenge sometimes. But I focused on the customer instead of the product.",
     result:
       "At that volume, the right angle compounds fast. Storytelling-led creative held performance where product-first creative had started to plateau.",
   },
@@ -33,7 +33,7 @@ const caseStudies = [
     insight:
       "Customers didn't distrust the product. They distrusted the claims.",
     approach:
-      "Show, don't tell. The strategy stripped back the copy and let the visual do the convincing. UGC-style video ads led with before-and-after footage. Real skin, real lighting, real results. No voiceover. No bullet points. Just proof, visible and undeniable. The viewer draws their own conclusion — that's always more persuasive than being told what to think.",
+      "Show, don't tell…\n\nThe strategy stripped back the copy and let the visual do the convincing. We started showing the results and the mechanism instead of explaining them.\n\nWe created UGC-style demo-ads with creators using the product and showing real results in everyday lighting. Nothing cosmetic at all.\n\nJust proof, visible and undeniable. The viewer draws their own conclusion. That's always more persuasive than being told what to think.",
     result:
       "When the visual does the convincing, the copy doesn't have to work as hard. When both pull in the same direction, the numbers reflect it.",
   },
@@ -47,7 +47,7 @@ const caseStudies = [
     situation:
       "Detergent is a category almost nobody markets emotionally. We Are Dip is a laundry sheet: dissolvable, plastic-free, no toxic chemicals. The product was genuinely different. The creative needed to communicate why that difference mattered.",
     insight:
-      "The research didn't find a cleaning insight. It found a parenting one. The audience wasn't primarily worried about whether their clothes would be clean — they were quietly concerned about what they were using to clean them, specifically around their children.",
+      "Research found that cleaning is not the no. 1 worry. People can use a bunch of products in the market and get the same results as far as cleaning goes.\n\nThe real concern was the health of their loved ones. They wanted to use a more organic, eco-friendly product.",
     approach:
       "The creative built scenes a parent would recognise. A child in freshly washed pyjamas. The small, everyday reassurance of knowing exactly what's in the product touching your family's skin. Video ads led with the emotional context, then introduced the product as the answer to a concern the viewer already had. UGC-format creative made it feel real.",
     result:
@@ -212,6 +212,7 @@ function CaseStudyRow({
                         fontSize: "1.0625rem",
                         color: highlight ? "hsl(var(--foreground)/0.9)" : "hsl(var(--muted-foreground))",
                         fontStyle: highlight ? "italic" : undefined,
+                        whiteSpace: "pre-line",
                       }}
                     >
                       {body}

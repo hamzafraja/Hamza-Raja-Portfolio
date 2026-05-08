@@ -12,7 +12,7 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Hamza is an excellent communicator and his writing skills are top-notch. He was able to transform my website in under three weeks. He gave me honest feedback and helped me make the appropriate changes to my content. I will re-hire Hamza as my business grows.",
+    quote: "Hamza is an excellent communicator and his writing skills are top-notch. He was able to transform my website in under two weeks. I saw a clear surge in booked calls after Hamza optimized the website. I will re-hire Hamza as my business grows.",
     name: "Pita Dhaliwal",
     role: "Business Owner",
     company: "Vernon BC",
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     image: "/testimonials/joshua.png",
   },
   {
-    quote: "Hamza wrote a video ad for us that performed really well. It was a pleasure working with him.",
+    quote: "Hamza wrote video ads for us that performed really well. It was a pleasure working with him.",
     name: "Gregory Fleurot",
     role: "Director of HR & Operations",
     company: "InnovativeLanguage.com",
@@ -61,7 +61,7 @@ const testimonials: Testimonial[] = [
     image: "/testimonials/kat.png",
   },
   {
-    quote: "Went out of his way to write an ad for my affiliate business on short notice, great work!",
+    quote: "Went out of his way to write ads for my affiliate business on short notice, great work!",
     name: "Kelton Driedger",
     role: "Founder",
     company: "JD Digital Brands Inc.",

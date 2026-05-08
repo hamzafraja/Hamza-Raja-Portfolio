@@ -53,6 +53,9 @@
   }
 }
 
+/* Hide scrollbar on sliders */
+.overflow-x-auto::-webkit-scrollbar { display: none; }
+
 /* Offset anchor targets so fixed nav doesn't cover them */
 [id] {
   scroll-margin-top: 64px;

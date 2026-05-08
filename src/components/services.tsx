@@ -14,7 +14,7 @@ const services = [
     number: "02",
     title: "CRO Copywriting",
     description:
-      "Sales pages, landing pages, and funnels written to convert. Not just to read well. To move people toward a decision.",
+      "Sales pages, landing pages, and funnels written to convert. Not only to make it clear and consistent with the funnel, but to move people towards an action.",
   },
   {
     number: "03",
@@ -171,7 +171,7 @@ export function Services() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section ref={ref} className="relative w-full py-20 lg:py-28 overflow-hidden">
+    <section id="services" ref={ref} className="relative w-full py-20 lg:py-28 overflow-hidden">
       <div className="pointer-events-none absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
 
       <div className="container mx-auto px-6 max-w-5xl">

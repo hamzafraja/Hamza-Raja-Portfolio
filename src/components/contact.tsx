@@ -23,22 +23,39 @@ export function Contact() {
 
   const [selected, setSelected] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-    const website = (form.elements.namedItem("website") as HTMLInputElement).value;
-    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
-    const tier = selected !== null ? tiers[selected].label : "Not specified";
+    setLoading(true);
+    setError(false);
 
-    const subject = encodeURIComponent(`New inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nWebsite: ${website}\nEngagement type: ${tier}\n\nWhat's not converting:\n${message}`
-    );
-    window.location.href = `mailto:hamzafarooqr@gmail.com?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      website: (form.elements.namedItem("website") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      engagement_type: selected !== null ? tiers[selected].label : "Not specified",
+    };
+
+    try {
+      const res = await fetch("https://formspree.io/f/xlgzpezo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -87,7 +104,7 @@ export function Contact() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.65, delay: 0.2, ease }}
         >
-          I work with a small number of clients at a time. The research phase takes real time, and compressed briefs produce compressed results.
+          Inquire for availability with your project details.
         </motion.p>
 
         {/* Two-column layout: tiers left, form right */}
@@ -153,7 +170,7 @@ export function Contact() {
               style={{ fontSize: "0.9375rem" }}
             >
               Fill in the form. I'll come back within{" "}
-              <span className="text-foreground/70 font-medium">24 hours</span> with one specific thing I'd look at first.
+              <span className="text-foreground/70 font-medium">2 business days</span>.
             </p>
           </motion.div>
 
@@ -191,7 +208,7 @@ export function Contact() {
                   className="font-sans text-muted-foreground leading-[1.7]"
                   style={{ fontSize: "0.9rem" }}
                 >
-                  I'll be back within 24 hours with one specific thing I'd look at first.
+                  I'll be back within 2 business days.
                 </p>
               </div>
             ) : (
@@ -241,9 +258,15 @@ export function Contact() {
                   />
                 </div>
 
+                {error && (
+                  <p className="font-sans text-sm text-red-400 -mb-1">
+                    Something went wrong. Please try again or email directly at hamzafarooqr@gmail.com
+                  </p>
+                )}
                 <button
                   type="submit"
-                  className="group flex items-center justify-center gap-3 font-sans font-semibold tracking-tight transition-all duration-200 focus-visible:outline-none mt-1"
+                  disabled={loading}
+                  className="group flex items-center justify-center gap-3 font-sans font-semibold tracking-tight transition-all duration-200 focus-visible:outline-none mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
                   style={{
                     backgroundColor: "#E8B840",
                     color: "#0D0A07",
@@ -254,14 +277,14 @@ export function Contact() {
                       "0 0 0 1px rgba(232,184,64,0.25), 0 8px 32px -4px rgba(232,184,64,0.22), 0 2px 8px rgba(0,0,0,0.4)",
                   }}
                   onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#F0C84A";
+                    if (!loading) (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#F0C84A";
                   }}
                   onMouseLeave={(e) => {
                     (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#E8B840";
                   }}
                 >
-                  Send It
-                  <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  {loading ? "Sending…" : "Send It"}
+                  {!loading && <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />}
                 </button>
               </form>
             )}

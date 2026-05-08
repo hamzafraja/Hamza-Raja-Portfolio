@@ -178,7 +178,7 @@ export function About() {
               className="font-sans text-muted-foreground leading-[1.8]"
               style={{ fontSize: "1.0625rem" }}
             >
-              It has helped me write pages that moved conversion rates by full percentage points. And it's helped me work with brands from scrappy startups to names like{" "}
+              It has helped me write pages that doubled the conversion rates. And it's helped me work with brands from scrappy startups to names like{" "}
               <span className="text-foreground/80 font-medium">Oral-B</span> and{" "}
               <span className="text-foreground/80 font-medium">PwC</span>.
             </p>
@@ -188,7 +188,7 @@ export function About() {
               className="font-display italic text-muted-foreground"
               style={{ fontSize: "1.2rem" }}
             >
-              Industries change, the process doesn't.
+              Industries change, the process stays the same.
             </p>
           </motion.div>
 

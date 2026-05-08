@@ -4,10 +4,11 @@ import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const navItems = [
-  { label: "Home",    href: "#home",    path: "/" },
-  { label: "Work",    href: "#work",    path: "/work" },
-  { label: "Results", href: "#results", path: "/results" },
-  { label: "About",   href: "#about",   path: "/about" },
+  { label: "Home",     href: "#home",     path: "/" },
+  { label: "Services", href: "#services", path: "/services" },
+  { label: "Work",     href: "#work",     path: "/work" },
+  { label: "Results",  href: "#results",  path: "/results" },
+  { label: "About",    href: "#about",    path: "/about" },
 ];
 
 function scrollToSection(href: string, navigate: ReturnType<typeof useNavigate>, path: string) {
@@ -115,7 +116,7 @@ export function NavHeader() {
           className="shrink-0 focus-visible:outline-none"
           aria-label="Home"
         >
-          <img src="/hamza-logo.svg" alt="Hamza" style={{ height: "42px", width: "auto" }} />
+          <img src="/Logo.png" alt="Hamza Raja" style={{ height: "120px", width: "auto" }} />
         </button>
 
         {/* Desktop nav */}

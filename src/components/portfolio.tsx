@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Film, FileText } from "lucide-react";
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -135,6 +136,23 @@ function ProjectCard({ src, label, type, href, index }: { src: string; label: st
   );
 }
 
+function AdSlider({ label, items, reverse = false }: { label: string; items: { src: string; label: string; type: string }[]; reverse?: boolean }) {
+  return (
+    <div>
+      <p className="font-sans text-xs font-medium tracking-widest uppercase text-muted-foreground mb-6" style={{ letterSpacing: "0.12em" }}>
+        {label}
+      </p>
+      <InfiniteSlider gap={16} duration={40} durationOnHover={80} reverse={reverse}>
+        {items.map((ad, i) => (
+          <div key={ad.src} style={{ width: "clamp(160px, 20vw, 220px)" }}>
+            <AdCard {...ad} index={i} />
+          </div>
+        ))}
+      </InfiniteSlider>
+    </div>
+  );
+}
+
 export function Portfolio() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-8%" });
@@ -221,41 +239,9 @@ export function Portfolio() {
             {/* Ad Creatives Tab */}
             <TabsContent value="ad-creatives" className="mt-0">
               <div className="space-y-12">
-                {/* Video Ads row */}
-                <div>
-                  <p
-                    className="font-sans text-xs font-medium tracking-widest uppercase text-muted-foreground mb-6"
-                    style={{ letterSpacing: "0.12em" }}
-                  >
-                    Video Ads
-                  </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                    {videoAds.map((ad, i) => (
-                      <AdCard key={ad.src} {...ad} index={i} />
-                    ))}
-                  </div>
-                </div>
-
-                {/* Divider */}
-                <div
-                  className="h-px w-full"
-                  style={{ background: "rgba(255,255,255,0.06)" }}
-                />
-
-                {/* Static Ads grid */}
-                <div>
-                  <p
-                    className="font-sans text-xs font-medium tracking-widest uppercase text-muted-foreground mb-6"
-                    style={{ letterSpacing: "0.12em" }}
-                  >
-                    Static Ads
-                  </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                    {staticAds.map((ad, i) => (
-                      <AdCard key={ad.src} {...ad} index={i} />
-                    ))}
-                  </div>
-                </div>
+                <AdSlider label="Video Ads" items={videoAds} />
+                <div className="h-px w-full" style={{ background: "rgba(255,255,255,0.06)" }} />
+                <AdSlider label="Static Ads" items={staticAds} reverse />
               </div>
             </TabsContent>
 
