@@ -12,10 +12,10 @@ function scrollToWork() {
 }
 
 const avatars = [
-  { src: "/testimonials/pita.png",    alt: "Pita Dhaliwal" },
-  { src: "/testimonials/matt.png",    alt: "Matt Mason" },
-  { src: "/testimonials/joshua.png",  alt: "Joshua George" },
-  { src: "/testimonials/gregory.png", alt: "Gregory Fleurot" },
+  { src: "/testimonials/pita.webp",    alt: "Pita Dhaliwal" },
+  { src: "/testimonials/matt.webp",    alt: "Matt Mason" },
+  { src: "/testimonials/joshua.webp",  alt: "Joshua George" },
+  { src: "/testimonials/gregory.webp", alt: "Gregory Fleurot" },
 ];
 
 function Hero() {

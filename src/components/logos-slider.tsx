@@ -2,15 +2,15 @@ import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import { ProgressiveBlur } from '@/components/ui/progressive-blur';
 
 const logos = [
-  { id: 'oral-b',      src: '/client-logos-processed/Oral-B-logo.png',              alt: 'Oral-B' },
-  { id: 'pwc',         src: '/client-logos-processed/pwc-logo.png',                 alt: 'PwC' },
-  { id: 'sugar-baby',  src: '/client-logos-processed/Sugar-baby-logo.png',          alt: 'Sugar Baby Care' },
-  { id: 'dip',         src: '/client-logos-processed/Dip-logo.png',                 alt: 'We Are Dip' },
-  { id: 'luhxe',       src: '/client-logos-processed/Luhxe-logo.png',               alt: 'Luhxe' },
-  { id: 'qiqi',        src: '/client-logos-processed/Qiqi-logo.png',                alt: 'Qiqi' },
-  { id: 'hyge',        src: '/client-logos-processed/hyge-logo.png',                alt: 'Hyge' },
-  { id: 'oak-haven',   src: '/client-logos-processed/oak-haven-logo.png',           alt: 'Oak Haven' },
-  { id: 'innovative',  src: '/client-logos-processed/innovative-language-logo.png', alt: 'Innovative Language' },
+  { id: 'oral-b',      src: '/client-logos-processed/Oral-B-logo.webp',              alt: 'Oral-B' },
+  { id: 'pwc',         src: '/client-logos-processed/pwc-logo.webp',                 alt: 'PwC' },
+  { id: 'sugar-baby',  src: '/client-logos-processed/Sugar-baby-logo.webp',          alt: 'Sugar Baby Care' },
+  { id: 'dip',         src: '/client-logos-processed/Dip-logo.webp',                 alt: 'We Are Dip' },
+  { id: 'luhxe',       src: '/client-logos-processed/Luhxe-logo.webp',               alt: 'Luhxe' },
+  { id: 'qiqi',        src: '/client-logos-processed/Qiqi-logo.webp',                alt: 'Qiqi' },
+  { id: 'hyge',        src: '/client-logos-processed/hyge-logo.webp',                alt: 'Hyge' },
+  { id: 'oak-haven',   src: '/client-logos-processed/oak-haven-logo.webp',           alt: 'Oak Haven' },
+  { id: 'innovative',  src: '/client-logos-processed/innovative-language-logo.webp', alt: 'Innovative Language' },
 ];
 
 export function LogosSlider() {

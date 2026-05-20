@@ -61,7 +61,7 @@ export function About() {
               }}
             >
               <img
-                src="/about-photo.png"
+                src="/about-photo.webp"
                 alt="Hamza Raja"
                 loading="lazy"
                 className="w-full h-full object-cover object-top"

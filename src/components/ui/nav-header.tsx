@@ -116,7 +116,7 @@ export function NavHeader() {
           className="shrink-0 focus-visible:outline-none"
           aria-label="Home"
         >
-          <img src="/Logo.png" alt="Hamza Raja" style={{ height: "120px", width: "auto" }} />
+          <img src="/Logo.webp" alt="Hamza Raja" style={{ height: "120px", width: "auto" }} />
         </button>
 
         {/* Desktop nav */}

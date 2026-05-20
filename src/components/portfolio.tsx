@@ -32,33 +32,33 @@ const videoAds: MediaItem[] = [
 
 const staticAds: MediaItem[] = [
   // Flair
-  { src: "/portfolio/static-ads/flair-futbol-1.png",                    label: "Flair Futbol",   type: "Static Ad" },
-  { src: "/portfolio/static-ads/flair-futbol-2.png",                    label: "Flair Futbol",   type: "Static Ad" },
-  { src: "/portfolio/static-ads/Flair Ad.png",                          label: "Flair Futbol",   type: "Static Ad" },
+  { src: "/portfolio/static-ads/flair-futbol-1.webp",                    label: "Flair Futbol",   type: "Static Ad" },
+  { src: "/portfolio/static-ads/flair-futbol-2.webp",                    label: "Flair Futbol",   type: "Static Ad" },
+  { src: "/portfolio/static-ads/Flair Ad.webp",                          label: "Flair Futbol",   type: "Static Ad" },
   // Sugar Baby Care
-  { src: "/portfolio/static-ads/sugar-baby.jpg",                        label: "Sugar Baby Care", type: "Static Ad" },
-  { src: "/portfolio/static-ads/Sugar Baby Care - Before:after.jpg",    label: "Sugar Baby Care", type: "Static Ad" },
+  { src: "/portfolio/static-ads/sugar-baby.webp",                        label: "Sugar Baby Care", type: "Static Ad" },
+  { src: "/portfolio/static-ads/Sugar Baby Care - Before:after.webp",    label: "Sugar Baby Care", type: "Static Ad" },
   // Enclir
-  { src: "/portfolio/static-ads/Enclir -Static Ad.jpg",                 label: "Enclir",         type: "Static Ad" },
-  { src: "/portfolio/static-ads/Enclir (before:after) - Static Ad.jpg", label: "Enclir",         type: "Static Ad" },
+  { src: "/portfolio/static-ads/Enclir -Static Ad.webp",                 label: "Enclir",         type: "Static Ad" },
+  { src: "/portfolio/static-ads/Enclir (before:after) - Static Ad.webp", label: "Enclir",         type: "Static Ad" },
   // We Are Dip
-  { src: "/portfolio/static-ads/dip-static.jpg",                        label: "We Are Dip",     type: "Static Ad" },
-  { src: "/portfolio/static-ads/We are dip - value ad.jpg",             label: "We Are Dip",     type: "Static Ad" },
+  { src: "/portfolio/static-ads/dip-static.webp",                        label: "We Are Dip",     type: "Static Ad" },
+  { src: "/portfolio/static-ads/We are dip - value ad.webp",             label: "We Are Dip",     type: "Static Ad" },
   // Luhxe
-  { src: "/portfolio/static-ads/Luhxe.jpg",                             label: "Luhxe",          type: "Static Ad" },
-  { src: "/portfolio/static-ads/Luhxe static ad.png",                   label: "Luhxe",          type: "Static Ad" },
-  { src: "/portfolio/static-ads/Luhxe value-static.jpg",                label: "Luhxe",          type: "Static Ad" },
+  { src: "/portfolio/static-ads/Luhxe.webp",                             label: "Luhxe",          type: "Static Ad" },
+  { src: "/portfolio/static-ads/Luhxe static ad.webp",                   label: "Luhxe",          type: "Static Ad" },
+  { src: "/portfolio/static-ads/Luhxe value-static.webp",                label: "Luhxe",          type: "Static Ad" },
 ];
 
 const copywritingProjects: MediaItem[] = [
-  { src: "/portfolio/display-images/keystone-project.png",      label: "Keystone",             type: "Landing Page",        href: "https://keystoneexecutivecoaching.com/free-business-coach-session/" },
-  { src: "/portfolio/display-images/qiqi-project.png",          label: "QiQi",                 type: "Brand Voice & Identity", href: "https://drive.google.com/file/d/1kNDsloUUBZ1y-T_QNEeActw6wRel0Hqo/view?usp=drive_link" },
-  { src: "/portfolio/display-images/oral-b-project.png",        label: "Oral-B",               type: "Media Campaign",      href: "https://drive.google.com/file/d/1wEklbMdtQEUeaEKB3ittuIiNDPsSORgy/view?usp=sharing" },
-  { src: "/portfolio/display-images/atlantis-landing-page.png", label: "Atlantis Medical",     type: "Landing Page",        href: "https://get.atlantismedical.com.au/v3-090525#sub-heading-BlactubM5uI-" },
-  { src: "/portfolio/display-images/mutha-earth-project.png",   label: "Mutha Earth",          type: "Product Descriptions", href: "https://muthaearth.ca/collections/all" },
-  { src: "/portfolio/display-images/baketivity-project.png",    label: "Baketivity",           type: "Email Sequence",      href: "https://drive.google.com/file/d/1OnzHIq6L2RaYFEMcIBYTRoTTpncx5v34/view?usp=sharing" },
-  { src: "/portfolio/display-images/linkedin-posts-project.png", label: "LinkedIn Posts",      type: "Founder Content",     href: "https://docs.google.com/document/d/1zOY5C9No4PHCkadW9vGRFz8SytQqosNO/edit?usp=drive_link&ouid=103651820346743649227&rtpof=true&sd=true" },
-  { src: "/portfolio/display-images/root-tourism-project.png",  label: "Italian Roots Tourism", type: "Marketing Strategy", href: "https://drive.google.com/file/d/11WXxGG6WjemeNcFBXnJG29X0oI0GmITF/view?usp=drive_link" },
+  { src: "/portfolio/display-images/keystone-project.webp",      label: "Keystone",             type: "Landing Page",        href: "https://keystoneexecutivecoaching.com/free-business-coach-session/" },
+  { src: "/portfolio/display-images/qiqi-project.webp",          label: "QiQi",                 type: "Brand Voice & Identity", href: "https://drive.google.com/file/d/1kNDsloUUBZ1y-T_QNEeActw6wRel0Hqo/view?usp=drive_link" },
+  { src: "/portfolio/display-images/oral-b-project.webp",        label: "Oral-B",               type: "Media Campaign",      href: "https://drive.google.com/file/d/1wEklbMdtQEUeaEKB3ittuIiNDPsSORgy/view?usp=sharing" },
+  { src: "/portfolio/display-images/atlantis-landing-page.webp", label: "Atlantis Medical",     type: "Landing Page",        href: "https://get.atlantismedical.com.au/v3-090525#sub-heading-BlactubM5uI-" },
+  { src: "/portfolio/display-images/mutha-earth-project.webp",   label: "Mutha Earth",          type: "Product Descriptions", href: "https://muthaearth.ca/collections/all" },
+  { src: "/portfolio/display-images/baketivity-project.webp",    label: "Baketivity",           type: "Email Sequence",      href: "https://drive.google.com/file/d/1OnzHIq6L2RaYFEMcIBYTRoTTpncx5v34/view?usp=sharing" },
+  { src: "/portfolio/display-images/linkedin-posts-project.webp", label: "LinkedIn Posts",      type: "Founder Content",     href: "https://docs.google.com/document/d/1zOY5C9No4PHCkadW9vGRFz8SytQqosNO/edit?usp=drive_link&ouid=103651820346743649227&rtpof=true&sd=true" },
+  { src: "/portfolio/display-images/root-tourism-project.webp",  label: "Italian Roots Tourism", type: "Marketing Strategy", href: "https://drive.google.com/file/d/11WXxGG6WjemeNcFBXnJG29X0oI0GmITF/view?usp=drive_link" },
 ];
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────

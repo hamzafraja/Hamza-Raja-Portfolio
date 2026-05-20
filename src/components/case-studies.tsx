@@ -8,8 +8,8 @@ const caseStudies = [
     number: "01",
     brand: "DTC Luggage Brand",
     tags: ["Creative Strategy", "Video Ads", "Static Ads"],
-    image: "/case-studies/luggage.png",
-    additionalImage: "/case-studies/luggage-case-study2.png",
+    image: "/case-studies/luggage.webp",
+    additionalImage: "/case-studies/luggage-case-study2.webp",
     stat: { value: "$1.63M", label: "Monthly Ad Spend" },
     roas: "2.98×",
     situation:
@@ -25,7 +25,7 @@ const caseStudies = [
     number: "02",
     brand: "Sugar Baby Care",
     tags: ["Creative Strategy", "UGC Ads", "Product Demo Ads"],
-    image: "/case-studies/sugar-baby.png",
+    image: "/case-studies/sugar-baby.webp",
     stat: { value: "$38K", label: "Monthly Ad Spend" },
     roas: "3.34×",
     situation:
@@ -41,7 +41,7 @@ const caseStudies = [
     number: "03",
     brand: "We Are Dip",
     tags: ["Creative Strategy", "Video Ads", "UGC Video Ads"],
-    image: "/case-studies/dip.png",
+    image: "/case-studies/dip.webp",
     stat: { value: "$33.5K", label: "Monthly Ad Spend" },
     roas: "6.6×",
     situation:
