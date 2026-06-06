@@ -6,7 +6,8 @@ const ease = [0.22, 1, 0.36, 1] as const;
 const caseStudies = [
   {
     number: "01",
-    brand: "DTC Luggage Brand",
+    headline: "$1.63M/month Ad Spend — 2.98× ROAS",
+    niche: "DTC Luggage Brand",
     tags: ["Creative Strategy", "Video Ads", "Static Ads"],
     image: "/case-studies/luggage.webp",
     additionalImage: "/case-studies/luggage-case-study2.webp",
@@ -23,13 +24,14 @@ const caseStudies = [
   },
   {
     number: "02",
-    brand: "Sugar Baby Care",
+    headline: "$38K/month Ad Spend — 3.34× ROAS",
+    niche: "DTC Skincare Brand",
     tags: ["Creative Strategy", "UGC Ads", "Product Demo Ads"],
     image: "/case-studies/sugar-baby.webp",
     stat: { value: "$38K", label: "Monthly Ad Spend" },
     roas: "3.34×",
     situation:
-      "Skincare is one of the most saturated categories in DTC. Every brand promises glow. Every brand shows before-and-afters. Sugar Baby Care needed creatives that could cut through a market that had heard every claim, and still convert.",
+      "Skincare is one of the most saturated categories in DTC. Every brand promises glow. Every brand shows before-and-afters. The brand needed creatives that could cut through a market that had heard every claim, and still convert.",
     insight:
       "Customers didn't distrust the product. They distrusted the claims.",
     approach:
@@ -39,23 +41,24 @@ const caseStudies = [
   },
   {
     number: "03",
-    brand: "We Are Dip",
+    headline: "$33.5K/month Ad Spend — 4.6× ROAS",
+    niche: "DTC Eco Laundry Brand",
     tags: ["Creative Strategy", "Video Ads", "UGC Video Ads"],
     image: "/case-studies/dip.webp",
     stat: { value: "$33.5K", label: "Monthly Ad Spend" },
-    roas: "6.6×",
+    roas: "4.6×",
     situation:
-      "Detergent is a category almost nobody markets emotionally. We Are Dip is a laundry sheet: dissolvable, plastic-free, no toxic chemicals. The product was genuinely different. The creative needed to communicate why that difference mattered.",
+      "Detergent is a category almost nobody markets emotionally. The brand makes laundry sheets: dissolvable, plastic-free, no toxic chemicals. The product was genuinely different. The creative needed to communicate why that difference mattered.",
     insight:
       "Research found that cleaning is not the no. 1 worry. People can use a bunch of products in the market and get the same results as far as cleaning goes.\n\nThe real concern was the health of their loved ones. They wanted to use a more organic, eco-friendly product.",
     approach:
       "The creative built scenes a parent would recognise. A child in freshly washed pyjamas. The small, everyday reassurance of knowing exactly what's in the product touching your family's skin. Video ads led with the emotional context, then introduced the product as the answer to a concern the viewer already had. UGC-format creative made it feel real.",
     result:
-      "In a low-emotion category, 6.6× peak ROAS is a signal that the emotional angle found something the product-first approach would have missed entirely.",
+      "In a low-emotion category, 4.6× peak ROAS is a signal that the emotional angle found something the product-first approach would have missed entirely.",
   },
 ];
 
-type CaseStudy = (typeof caseStudies)[0] & { additionalImage?: string };
+type CaseStudy = (typeof caseStudies)[0] & { additionalImage?: string; niche: string; headline: string };
 
 function CaseStudyRow({
   cs,
@@ -106,18 +109,27 @@ function CaseStudyRow({
           {cs.number}.
         </span>
 
-        {/* Brand + tags */}
+        {/* Headline + niche + tags */}
         <div className="min-w-0">
           <h3
-            className="font-display font-semibold leading-none mb-3 transition-colors duration-300"
+            className="font-display font-semibold leading-none mb-2 transition-colors duration-300"
             style={{
-              fontSize: "clamp(1.5rem, 4vw, 2.75rem)",
+              fontSize: "clamp(1.1rem, 2.8vw, 2rem)",
               letterSpacing: "-0.025em",
               color: isOpen ? "hsl(var(--foreground))" : "hsl(var(--foreground)/0.8)",
             }}
           >
-            {cs.brand}
+            {cs.headline}
           </h3>
+          <p
+            className="font-sans mb-3 transition-colors duration-300"
+            style={{
+              fontSize: "0.8rem",
+              color: isOpen ? "hsl(var(--muted-foreground)/0.9)" : "hsl(var(--muted-foreground)/0.6)",
+            }}
+          >
+            {cs.niche}
+          </p>
           <div className="flex flex-wrap gap-2">
             {cs.tags.map((tag) => (
               <span
@@ -266,7 +278,7 @@ function CaseStudyRow({
                 >
                   <img
                     src={cs.image}
-                    alt={cs.brand}
+                    alt={cs.niche}
                     loading="lazy"
                     className="w-full h-full object-cover"
                   />
@@ -289,7 +301,7 @@ function CaseStudyRow({
                   >
                     <img
                       src={cs.additionalImage}
-                      alt={`${cs.brand} — additional`}
+                      alt={`${cs.niche} — additional`}
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />

@@ -10,7 +10,7 @@ const stats = [
     context: "Skincare brand, $38K/mo",
   },
   {
-    value: "6.6×",
+    value: "4.6×",
     label: "Peak ROAS",
     context: "Lifestyle brand, $33.5K/mo",
   },

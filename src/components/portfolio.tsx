@@ -39,7 +39,7 @@ const staticAds: MediaItem[] = [
   { src: "/portfolio/static-ads/sugar-baby.webp",                        label: "Sugar Baby Care", type: "Static Ad" },
   { src: "/portfolio/static-ads/Sugar Baby Care - Before:after.webp",    label: "Sugar Baby Care", type: "Static Ad" },
   // Enclir
-  { src: "/portfolio/static-ads/Enclir -Static Ad.webp",                 label: "Enclir",         type: "Static Ad" },
+  { src: "/portfolio/static-ads/Enclir static ad.jpg",                   label: "Enclir",         type: "Static Ad" },
   { src: "/portfolio/static-ads/Enclir (before:after) - Static Ad.webp", label: "Enclir",         type: "Static Ad" },
   // We Are Dip
   { src: "/portfolio/static-ads/dip-static.webp",                        label: "We Are Dip",     type: "Static Ad" },
