@@ -148,20 +148,14 @@ function CaseStudyRow({
           </div>
         </div>
 
-        {/* ROAS + expand icon */}
+        {/* Niche + expand icon */}
         <div className="flex items-center gap-5 shrink-0">
           <div className="hidden sm:block text-right">
             <div
-              className="font-display font-semibold leading-none"
-              style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", color: "#E8B840", letterSpacing: "-0.02em" }}
+              className="font-sans font-medium"
+              style={{ fontSize: "0.8rem", color: "hsl(var(--muted-foreground)/0.7)", letterSpacing: "0.01em" }}
             >
-              {cs.roas}
-            </div>
-            <div
-              className="font-sans text-muted-foreground uppercase tracking-widest mt-1"
-              style={{ fontSize: "0.58rem", letterSpacing: "0.12em" }}
-            >
-              Peak ROAS
+              {cs.niche}
             </div>
           </div>
 
