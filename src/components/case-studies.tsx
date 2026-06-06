@@ -121,15 +121,6 @@ function CaseStudyRow({
           >
             {cs.headline}
           </h3>
-          <p
-            className="font-sans mb-3 transition-colors duration-300"
-            style={{
-              fontSize: "0.8rem",
-              color: isOpen ? "hsl(var(--muted-foreground)/0.9)" : "hsl(var(--muted-foreground)/0.6)",
-            }}
-          >
-            {cs.niche}
-          </p>
           <div className="flex flex-wrap gap-2">
             {cs.tags.map((tag) => (
               <span
@@ -152,8 +143,8 @@ function CaseStudyRow({
         <div className="flex items-center gap-5 shrink-0">
           <div className="hidden sm:block text-right">
             <div
-              className="font-sans font-medium"
-              style={{ fontSize: "0.8rem", color: "hsl(var(--muted-foreground)/0.7)", letterSpacing: "0.01em" }}
+              className="font-display font-semibold leading-none"
+              style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", color: "#E8B840", letterSpacing: "-0.02em" }}
             >
               {cs.niche}
             </div>
